@@ -7,8 +7,9 @@ def one():
         except ValueError:
             print("Введите число!")
         else:
-            print("Наибольшее число: ",max(z, x, c))
+            print("Наибольшее число: ", max(z, x, c))
         break
+
 
 def two():
     b = 0
@@ -29,6 +30,7 @@ def two():
             print(b)
             break
 
+
 def three():
     z = input("Введите число, букву или знак: ")
     if z.isspace() or z == "":
@@ -40,12 +42,14 @@ def three():
     else:
         print("Это знак")
 
+
 def four():
     z = input("Введите число: ")
     if z.isdigit():
         print("Оно натуральное")
     else:
         print("Число не натуральное")
+
 
 def five_one():
     while True:
@@ -68,6 +72,7 @@ def five_one():
                 print("Такого треугольника нет")
             break
 
+
 def five_two():
     while True:
         try:
@@ -89,6 +94,7 @@ def five_two():
                 print("Такого треугольника нет")
             break
 
+
 def five_swticth():
     print("Выберите способ нахождения треугольника")
     while True:
@@ -102,6 +108,7 @@ def five_swticth():
             print("Ошибка")
         break
 
+
 def six():
     while True:
         try:
@@ -112,7 +119,7 @@ def six():
             print("Ошибка")
         else:
             z = str(z)
-            if int(z[0]+z[1]+z[2]) == int(z[3]+z[4]+z[5]):
+            if int(z[0] + z[1] + z[2]) == int(z[3] + z[4] + z[5]):
                 print("Поздравляю, ваш билет:", z, " - счастливый!")
             elif int(z[0] == z[1] == z[2] == z[3] == z[4] == z[5]):
                 print("Поздравляю, ваш билет:", z, " - счастливый!")
@@ -121,6 +128,7 @@ def six():
             else:
                 print("Печалька, ваш билет:", z, " - несчаслтивый :(")
             break
+
 
 def seven():
     while True:
@@ -143,11 +151,12 @@ def seven():
         except ValueError:
             print("Введите число!")
         else:
-            if (a < x and b < y) or (a < y and b < x): #ПЕРЕДЕЛАТЬ ЗАДАНИЕ!!!!!!
+            if (a < x and b < y) or (a < y and b < x):  # ПЕРЕДЕЛАТЬ ЗАДАНИЕ!!!!!!
                 print("КИРПИЧ ЗАШЁЛ!")
             else:
                 print("Кирпич не влез")
         break
+
 
 def eight():
     print("Вводите числа в диапазоне от 1 до 8")
@@ -155,22 +164,26 @@ def eight():
         try:
             k = int(input("Введите k[1-8]: "))
             if (k >= 1) and (k <= 8): break
-        except ValueError: print("Введите число!")
+        except ValueError:
+            print("Введите число!")
     while True:
         try:
             l = int(input("Введите l[1-8]: "))
             if (l >= 1) and (l <= 8): break
-        except ValueError: print("Введите число!")
+        except ValueError:
+            print("Введите число!")
     while True:
         try:
             m = int(input("Введите m[1-8]: "))
             if (m >= 1) and (m <= 8): break
-        except ValueError: print("Введите число!")
+        except ValueError:
+            print("Введите число!")
     while True:
         try:
             n = int(input("Введите n[1-8]: "))
             if (n >= 1) and (n <= 8): break
-        except ValueError: print("Введите число!")
+        except ValueError:
+            print("Введите число!")
     rook = False
     if (k == m) or (l == n):
         rook = True
@@ -178,13 +191,13 @@ def eight():
     if (k == l) and (m == n):
         elephant = True
     horse = False
-    if ((k + 1 == m) and (l + 2 == n))\
-            or ((k - 1 == m) and (l + 2 == n))\
-            or ((k + 2 == m) and (l + 1 == n))\
-            or ((k + 2 == m) and (l - 1 == n))\
-            or ((k + 1 == m) and (l - 2 == n))\
-            or ((k - 1 == m) and (l - 2 == n))\
-            or ((k - 2 == m) and (l - 1 == n))\
+    if ((k + 1 == m) and (l + 2 == n)) \
+            or ((k - 1 == m) and (l + 2 == n)) \
+            or ((k + 2 == m) and (l + 1 == n)) \
+            or ((k + 2 == m) and (l - 1 == n)) \
+            or ((k + 1 == m) and (l - 2 == n)) \
+            or ((k - 1 == m) and (l - 2 == n)) \
+            or ((k - 2 == m) and (l - 1 == n)) \
             or ((k - 2 == m) and (l + 1 == n)):
         horse = True
     pawn = False
